@@ -1,0 +1,153 @@
+//start variables
+$mobileScreen: "(max-width: 767px)";
+$otherScreen: "(min-width: 768px)";
+//end variables
+//start global rules
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+}
+#container {
+  background-color: hsl(204, 43%, 93%);
+  #page {
+    .top {
+      padding: 30px;
+      h1 {
+        font-size: 120%;
+        color: hsl(179, 62%, 43%);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 90%;
+        color: hsl(71, 73%, 54%);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 75%;
+        color: hsl(218, 22%, 67%);
+        font-weight: 500;
+      }
+    }
+    .midle {
+      background-color: hsl(179, 62%, 43%);
+      padding: 30px;
+      h2 {
+        font-size: 75%;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 73%;
+        color: hsl(204, 43%, 93%);
+        font-weight: 500;
+        margin-bottom: 15px;
+        span {
+          &.bold {
+            display: inline-block;
+            font-size: 155%;
+            font-weight: 700;
+            color: hsl(0, 0%, 100%);
+            margin-right: 10px;
+          }
+        }
+      }
+      p {
+        font-size: 73%;
+        color: hsl(204, 43%, 93%);
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+      button {
+        border: none;
+        outline: none;
+        font-size: 70%;
+        background-color: hsl(71, 73%, 54%);
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    .button {
+      background-color: hsla(179, 62%, 43%, 0.7);
+      padding: 30px;
+      h2 {
+        font-size: 75%;
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 73%;
+        color: hsl(204, 43%, 93%);
+        font-weight: 500;
+        margin-bottom: 15px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  @media #{$mobileScreen} {
+    padding: 40px 20px;
+    #page {
+      .top {
+        border-radius: 4px 4px 0 0;
+      }
+      .midle {
+        border-radius: 0 0 0 0;
+      }
+      .button {
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+  @media #{$otherScreen} {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #page {
+      display: grid;
+      grid-template-columns: repeat(2, 350px);
+      grid-template-rows: repeat(2, 200px);
+      .top {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 4px 4px 0 0;
+      }
+      .midle {
+        grid-column: 1/2;
+        border-radius: 0 0 0 4px;
+      }
+      .button {
+        grid-column: 2/3;
+        border-radius: 0 0 4px 0;
+      }
+    }
+  }
+}
+//start footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+//end footer
